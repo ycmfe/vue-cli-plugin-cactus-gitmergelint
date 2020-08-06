@@ -1,0 +1,37 @@
+{
+  "name": "@ycmfe/vue-cli-plugin-cactus-gitmergelint",
+  "version": "1.0.0",
+  "description": "cactus git push lints plugin",
+  "scripts": {
+    "cz": "git add . && git cz"
+  },
+  "keywords": [
+    "vue",
+    "cli",
+    "cactus",
+    "gitmergelint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycmfe/vue-cli-plugin-cactus-gitmergelint.git"
+  },
+  "homepage": "https://github.com/ycmfe/vue-cli-plugin-cactus-gitmergelint.git#readme",
+  "author": "liuqing",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "husky": "^3.0.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-merge-commit": "node ./lib/pre",
+      "post-merge": "node ./lib/post"
+    }
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "word-wrap": "^1.2.3"
+  }
+}
